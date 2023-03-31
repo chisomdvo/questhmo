@@ -9,7 +9,7 @@
           >
             <div class="flex justify-start lg:w-0 lg:flex-1">
               <router-link
-                to="/home"
+                to="/"
                 class="flex items-center justify-center text-center"
               >
                 <span class="sr-only">Workflow</span>

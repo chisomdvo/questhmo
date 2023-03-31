@@ -38,13 +38,13 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: "/home",
       name: "Home",
       component: Home,
       meta: { title: "Home - Oillead Services" },
     },
     {
-      path: "/home",
+      path: "/",
       name: "HomePage",
       component: HomePage,
       meta: { title: "Home - Oillead Services" },
