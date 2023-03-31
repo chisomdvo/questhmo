@@ -66,7 +66,7 @@
               <span class="text-4xl font-extrabold text-gray-900"
                 >₦{{ tier.priceMonthly }}</span
               >
-              <span class="text-base font-medium text-gray-500">/mo</span>
+              <span class="text-base font-medium text-gray-500">/Annually</span>
             </p>
             <p class="mt-4 text-sm text-gray-500">{{ tier.description }}</p>
             <router-link

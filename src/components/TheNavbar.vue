@@ -248,11 +248,11 @@
                 </div>
                 <div class="mt-6">
                   <nav class="grid gap-y-8">
-                    <a
+                    <PopoverButton
                       v-for="item in solutions"
                       :key="item.name"
-                      :href="item.href"
-                      class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                      @click="scrollMeTo(item.link)"
+                      class="-m-3 p-3 flex cursor-pointer items-center rounded-md hover:bg-gray-50"
                     >
                       <component
                         :is="item.icon"
@@ -262,63 +262,28 @@
                       <span class="ml-3 text-base font-medium text-gray-900">
                         {{ item.name }}
                       </span>
-                    </a>
+                    </PopoverButton>
                   </nav>
                 </div>
               </div>
               <div class="py-6 px-5 space-y-6">
                 <div class="grid grid-cols-2 gap-y-4 gap-x-8">
                   <a
-                    href="#"
-                    class="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Pricing
-                  </a>
-
-                  <a
-                    href="#"
-                    class="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Docs
-                  </a>
-
-                  <a
-                    href="#"
-                    class="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Blog
-                  </a>
-
-                  <a
-                    href="#"
-                    class="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    Contact Sales
-                  </a>
-                  <a
                     v-for="item in resources"
                     :key="item.name"
-                    :href="item.href"
                     class="text-base font-medium text-gray-900 hover:text-gray-700"
                   >
                     {{ item.name }}
                   </a>
                 </div>
                 <div>
-                  <a
+                  <router-link
+                    to="/login"
                     href="#"
                     class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                   >
-                    Sign up
-                  </a>
-                  <p
-                    class="mt-6 text-center text-base font-medium text-gray-500"
-                  >
-                    Existing customer?
-                    <a href="#" class="text-indigo-600 hover:text-indigo-500">
-                      Sign in
-                    </a>
-                  </p>
+                    LOGIN
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -357,18 +322,21 @@ const solutions = [
     description:
       "Get a better understanding of where your traffic is coming from.",
     href: "#",
+    link: "healthplan",
     icon: ChartBarIcon,
   },
   {
     name: "FAMILY PLAN",
     description: "Speak directly to your customers in a more meaningful way.",
     href: "#",
+    link: "healthplan",
     icon: CursorClickIcon,
   },
   {
     name: "BUSINESS PLAN",
     description: "Your customers' data will be safe and secure.",
     href: "#",
+    link: "healthplan",
     icon: ShieldCheckIcon,
   },
 ];
@@ -385,14 +353,14 @@ const resources = [
     icon: SupportIcon,
   },
   {
-    name: "Call us:+2347012312312",
+    name: "Call us:07012312312",
     description:
       "Learn how to maximize our platform to get the most out of it.",
     href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: "WhatsApp:+2347012312312",
+    name: "WhatsApp:07012312312",
     description:
       "See what meet-ups and other events we might be planning near you.",
     href: "#",

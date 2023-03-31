@@ -57,7 +57,9 @@
             </div>
             <p class="text-white font-bold text-lg">
               <span class="text-red-700 font-bold"> Address: </span>
-              <a class="text-gray-500">186 Awolowo Road, Ikoyi, Lagos.</a>
+              <a class="text-gray-500"
+                >Oladimeji Alo Street, Lekki Phase 1, Lagos State.</a
+              >
             </p>
             <p class="text-white font-bold text-lg">
               <span class="text-red-700 font-bold"> Email: </span>
