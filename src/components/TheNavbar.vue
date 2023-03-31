@@ -28,7 +28,7 @@
   <div class="bg-white">
     <div class="bg-white">
       <!-- Header -->
-      <Popover class="relative">
+      <Popover class="relative sticky z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
           <div
             class="flex justify-between items-center border-b border-indigo-400 border-opacity-25 py-6 md:justify-start md:space-x-10"
